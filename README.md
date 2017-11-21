@@ -32,3 +32,21 @@ To use the services follow the documentation in your local running instance at h
 For example, to get the first 5 todos from the command line in a linux enviroment with curl:
 
 * curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://127.0.0.1:8000/todos
+
+## Pagination and filtering
+
+Pagination: To paginate just add ?page=n to the query string, where n is the number page you want. You can also use offset=n, to skip the n first results. Keep in mind that page has precedence if both are present.
+
+Filter: Filter only works on the following Document fields:
+
+completed=true|false
+
+due_date:date(Y-m-d)
+
+created_at:date(Y-m-d)
+
+updated_at:date(Y-m-d)
+
+To filter just add ?filter=name::value to the query string, where name is one of the fields listed and value is the value to filter. If you want to filter with more than one field just concatenate the name and value with "|" like this: name::value|name2::value.
+
+All this was done following the "RESTful Best Practices" by http://www.restapitutorial.com/
