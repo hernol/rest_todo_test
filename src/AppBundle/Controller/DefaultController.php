@@ -57,7 +57,7 @@ class DefaultController extends FOSRestController {
         return View::create(null, Codes::HTTP_NOT_FOUND);
     }
     
-    private $limit = 5555;
+    private $limit = 5;
     /**
      * @Rest\Get("/todos")
      * @ApiDoc(

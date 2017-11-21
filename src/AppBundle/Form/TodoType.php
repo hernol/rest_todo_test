@@ -24,9 +24,9 @@ class TodoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('title', TextType::class)
-                ->add('description', TextareaType::class)
+                ->add('description', TextareaType::class, array('required'=>false))
                 ->add('due_date', DateTimeType::class, array('widget' => 'single_text', 'format' => 'yyyy-MM-dd'))
-                ->add('completed', BooleanType::class);
+                ->add('completed', BooleanType::class, array('required'=>false));
     }
 
     /**
