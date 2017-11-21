@@ -27,8 +27,8 @@ This is a simple TODO rest api for testing.
 
 ### Usage
 
-To use the services follow the documentation in your local running instance at http://localhost:8000/doc if you are using the symfony builtin server.
+To use the services follow the documentation in your local running instance at http://127.0.0.1:8000/doc if you are using the symfony builtin server.
 
 For example, to get the first 5 todos from the command line in a linux enviroment with curl:
 
-* curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://hostname
+* curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://127.0.0.1:8000/todos
